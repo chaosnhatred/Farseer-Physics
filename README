@@ -1,3 +1,6 @@
+This is a special modified version of Farseer Physic to work with Monogame and Playstation Mobile SDK.
+
+------------------------------------------
 What is Farseer Physics Engine?
 Farseer Physics Engine is a collision detection system with realistic physics responses.
 This means you can create a game or robotic simulation easily using the engine and

@@ -234,7 +234,11 @@ namespace FarseerPhysics.Common
             return !float.IsInfinity(x);
         }
 
-        public static bool IsValid(this Vector2 x)
+#if PSS
+        public static bool IsValid(Vector2 x)
+#else
+		public static bool IsValid(this Vector2 x)
+#endif
         {
             return IsValid(x.X) && IsValid(x.Y);
         }

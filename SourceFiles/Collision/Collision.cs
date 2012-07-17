@@ -341,7 +341,11 @@ namespace FarseerPhysics.Collision
         {
             Vector2 d = UpperBound - LowerBound;
             bool valid = d.X >= 0.0f && d.Y >= 0.0f;
+#if PSS
+			//TODO
+#else
             valid = valid && LowerBound.IsValid() && UpperBound.IsValid();
+#endif
             return valid;
         }
 

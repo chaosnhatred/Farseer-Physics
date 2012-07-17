@@ -78,9 +78,11 @@ namespace FarseerPhysics.Dynamics.Joints
             Frequency = 5.0f;
             DampingRatio = 0.7f;
             MaxForce = 1000 * body.Mass;
-
+#if PSS
+			//TODO
+#else
             Debug.Assert(worldAnchor.IsValid());
-
+#endif
             _targetA = worldAnchor;
             LocalAnchorB = MathUtils.MulT(BodyA.Xf, worldAnchor);
         }

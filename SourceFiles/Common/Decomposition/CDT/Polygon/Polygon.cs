@@ -40,7 +40,9 @@
 
 using System;
 using System.Collections.Generic;
+#if !PSS
 using System.Linq;
+#endif
 using Poly2Tri.Triangulation.Delaunay;
 
 namespace Poly2Tri.Triangulation.Polygon
@@ -65,16 +67,23 @@ namespace Poly2Tri.Triangulation.Polygon
             // Its something that often happen when importing polygon data from other formats
             if (points[0].Equals(points[points.Count - 1])) points.RemoveAt(points.Count - 1);
 
+#if PSS
+			//TODO
+#else
             _points.AddRange(points.Cast<TriangulationPoint>());
+#endif
         }
 
         /// <summary>
         /// Create a polygon from a list of at least 3 points with no duplicates.
         /// </summary>
         /// <param name="points">A list of unique points.</param>
+#if PSS
+#else
         public Polygon(IEnumerable<PolygonPoint> points) : this((points as IList<PolygonPoint>) ?? points.ToArray())
         {
         }
+#endif
 
         public Polygon()
         {

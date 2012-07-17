@@ -35,9 +35,9 @@ using Poly2Tri.Triangulation;
 using Poly2Tri.Triangulation.Delaunay;
 using Poly2Tri.Triangulation.Delaunay.Sweep;
 using Poly2Tri.Triangulation.Polygon;
-
+#if !PSS
 using System.Linq;
-
+#endif
 namespace FarseerPhysics.Common.Decomposition
 {
     public static class CDTDecomposer
