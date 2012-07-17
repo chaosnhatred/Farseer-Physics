@@ -1,4 +1,14 @@
-This is a special modified version of Farseer Physic to work with Monogame and Playstation Mobile SDK.
+This is a special modified version of Farseer Physics to work with
+
+-PlayStation(R)Mobile SDK
+-MonoAndroid
+-Mono on Windows
+-Mono on Linux
+
+and of couse
+-XNA
+-WP7
+-Xbox360
 
 ------------------------------------------
 What is Farseer Physics Engine?
